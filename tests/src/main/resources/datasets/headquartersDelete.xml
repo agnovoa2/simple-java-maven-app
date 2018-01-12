@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<HeadQuarter headQuarterId="700" headquarterName="A Madroa"
+		headquarterDescription="Instalaciones del Rapido de Bouzas"
+		headquarterAddress="Avenida de la Coruña 12" headquarterLocality="Bouzas"
+		headquarterProvince="Pontevedra" headQuarterManagedByUser_userId="999"
+		headquarterDeleted="true" />
+</dataset>

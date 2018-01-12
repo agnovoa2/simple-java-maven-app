@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+	<Team teamId="900" teamName="Rapido de Bouzas F.C."
+		teamDescription="Rapido de Bouzas F.C." teamShortName="RdB FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" />
+	<Team teamId="800" teamName="Rapido de Bouzas 2 F.C."
+		teamDescription="Rapido de Bouzas 2 F.C." teamShortName="RdB 2 FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" />
+	<HeadQuarter headQuarterId="700" headquarterName="A Madroa"
+		headquarterDescription="Instalaciones del Rapido de Bouzas"
+		headquarterAddress="Avenida de la Coruña 12" headquarterLocality="Bouzas"
+		headquarterProvince="Pontevedra" headquarterDeleted="false"/>
+	<Competition competitionId="600" competitionName="Liga gallega"
+		competitionShortName="LigaG" competitionDescription="Descripción de la liga gallega"
+		competitionSportType="FOOTBALL11" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0" />
+	<Round roundId="500" roundNumber="5" roundDate="1991-08-02 00:00:00.0"
+		roundState="CANCELED" roundDescription="For testing"
+		competition_CompetitionId="600" headquarter_HeadQuarterId="700" />
+</dataset>

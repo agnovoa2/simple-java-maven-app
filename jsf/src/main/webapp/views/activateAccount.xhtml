@@ -1,0 +1,66 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Register1</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+
+	<!-- Bootstrap -->
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+
+
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="container-fluid">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<p:panel rendered="#{register.activateSuccess}"
+					header="Account Seccessfully Activated">
+					<h:outputLabel rendered="#{register.activateSuccess}"
+						value="Your account has now been activated and you can login by using yor login and your password."></h:outputLabel>
+
+					<h:form>
+						<p:commandButton value="Continue"
+							action="#{register.doRedirectToLogin}"></p:commandButton>
+					</h:form>
+				</p:panel>
+
+				<p:panel rendered="#{!register.activateSuccess}"
+					header="Invalid Token">
+					<h:outputLabel rendered="#{!register.activateSuccess}"
+						value="The token is invalid."></h:outputLabel>
+					<h:form>
+						<p:commandButton value="Continue"
+							action="#{register.doRedirectToLogin}"></p:commandButton>
+					</h:form>
+				</p:panel>
+			</div>
+
+			<div class="col-md-3"></div>
+
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<h:outputScript name="js/jquery-1.12.4.min.js" />
+	<!-- Bootstrap -->
+	<h:outputScript library="webjars"
+		name="bootstrap/3.3.7/js/bootstrap.min.js" />
+	<!-- Custom Theme Scripts -->
+	<h:outputScript name="js/custom.min.js" />
+</h:body>
+</html>

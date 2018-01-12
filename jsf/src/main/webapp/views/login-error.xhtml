@@ -1,0 +1,44 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Login Error</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+
+	<!-- 	Bootstrap -->
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+	<h:outputStylesheet name="css/styles.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+</h:head>
+<h:body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<!-- page content -->
+			<div class="col-md-12">
+				<div class="col-middle">
+					<div class="text-center text-center loginError">
+						<h1 class="error-number">Error in login</h1>
+						<h1>please try again</h1>
+						<h2 class="returnToLogin">
+							<p:link outcome="private/index.xhtml" value="Back to login"></p:link>
+						</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</h:body>
+</html>

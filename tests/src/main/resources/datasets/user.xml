@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<User userId="1" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirtdate="01/01/1970"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userPlayer="1" />
+	<User userId="2" userLogin="afmaillo" userName="Ana" userSurname="Fernández Maíllo"
+		userPassword="abcd1234.." userBirtdate="02/02/1980"
+		userIdentificationDocument="22234578B" userResidence="Avda Caldas 67-2"
+		userLocality="Vigo" userProvince="Pontevedra" userCountry="España"
+		userPhone="+34661457898" userTwitter="https://twitter.com/afmaillo"
+		userFacebook="https://facebook.com/afmaillo" userInstagram="https://instagram.com/afmaillo"
+		userEmail="afmaillo@gmail.es" userConfirmed="false" userPlayer="3" />
+	<User userId="3" userLogin="dvconde" userName="Daniel"
+		userSurname="Vázquez Conde" userPassword="abcd1234.." userBirtdate="02/07/1991"
+		userIdentificationDocument="34567894H" userResidence="C/ Valle Inclán 1-3D"
+		userLocality="A Coruña" userProvince="A Coruña" userCountry="España"
+		userPhone="+34666547896" userTwitter="https://twitter.com/dvconde"
+		userFacebook="https://facebook.com/dvconde" userInstagram="https://instagram.com/dvconde"
+		userEmail="dvconde@gmail.es" userConfirmed="false" userPlayer="6" />
+	<User userId="4" userLogin="mfgomez" userName="Miguel"
+		userSurname="Fernández Gómez" userPassword="abcd1234.." userBirtdate="02/02/1990"
+		userIdentificationDocument="34557789V" userResidence="Avda Madrid 23-2A"
+		userLocality="Madrid" userProvince="Madrid" userCountry="España"
+		userPhone="+34671125456" userTwitter="https://twitter.com/mfgomez"
+		userFacebook="https://facebook.com/mfgomez" userInstagram="https://instagram.com/mfgomez"
+		userEmail="mfgomez@gmail.es" userConfirmed="false" userPlayer="8" />
+	<User userId="5" userLogin="svlopez" userName="Susana"
+		userSurname="Vázquez López" userPassword="abcd1234.." userBirtdate="07/10/1987"
+		userIdentificationDocument="12344889J" userResidence="C/ Callao 12-1A"
+		userLocality="Barcelona" userProvince="Barcelona" userCountry="España"
+		userPhone="+34611477896" userTwitter="https://twitter.com/svlopez"
+		userFacebook="https://facebook.com/svlopez" userInstagram="https://instagram.com/svlopez"
+		userEmail="svlopez@gmail.es" userConfirmed="false" userPlayer="10" />
+
+	<Player playerId="1" playerNickName="Stout" playerPicture=""
+		playerInterests="" playerEmail="test@gmail.com" playerLocation="Madrid"
+		playerProvince="Madrid" playerFavouriteSportsList="Fútbol"
+		playerFavouriteTeamList="Real Madrid" playerPrivacity="false"
+		playerManagedByUser="1" />
+	<Player playerId="2" playerNickName="Twitch" playerPicture=""
+		playerInterests="" playerEmail="test1@gmail.com" playerLocation="Barcelona"
+		playerProvince="Barcelona" playerFavouriteSportsList="Fútbol"
+		playerFavouriteTeamList="Barcelona FC" playerPrivacity="false"
+		playerManagedByUser="1" />
+	<Player playerId="3" playerNickName="Aqua" playerPicture=""
+		playerInterests="" playerEmail="test2@gmail.com" playerLocation="Albacete"
+		playerProvince="Castilla la Mancha" playerFavouriteSportsList="Baloncesto"
+		playerFavouriteTeamList="Real cheste A" playerPrivacity="false"
+		playerManagedByUser="2" />
+	<Player playerId="4" playerNickName="Rebel" playerPicture=""
+		playerInterests="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In dignissim sem in mauris volutpat, vel faucibus dolor rhoncus. Sed congue molestie arcu, sit amet luctus enim tempor eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla at nunc vel magna interdum tincidunt. Curabitur libero nulla, volutpat auctor commodo id, fermentum eget libero. Suspendisse eu accumsan erat, et sodales nisi. Curabitur porttitor hendrerit ipsum a vestibulum. Donec in odio laoreet, blandit nisl vel, sagittis nibh. 
+Praesent non lorem ac enim aliquet dignissim sit amet ac odio. Aliquam erat volutpat. Quisque iaculis sem eu odio interdum, quis fermentum metus volutpat. Aenean mattis fringilla maximus. Maecenas sollicitudin libero interdum, condimentum tortor a, volutpat urna. Nullam purus risus, fringilla at dolor egestas, dignissim egestas tortor. Phasellus rutrum tellus vel augue dapibus facilisis.
+Curabitur neque ipsum, rhoncus non risus et, vestibulum aliquam eros. Nullam nec purus in tortor maximus tempus a vel lectus. Fusce neque sapien, vestibulum quis justo eget, rutrum vulputate velit. Nullam interdum augue erat, in eleifend lectus molestie at. Nulla a ultricies augue."
+		playerEmail="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com"
+		playerLocation="" playerProvince="Pontevedra"
+		playerFavouriteSportsList="League of Legends" playerFavouriteTeamList="Fnatic"
+		playerPrivacity="false" playerManagedByUser="2" />
+	<Player playerId="5" playerNickName="Bone" playerPicture=""
+		playerInterests="" playerEmail="test5@gmail.com" playerLocation="Ourense"
+		playerProvince="Ourense" playerFavouriteSportsList="Counter Strike"
+		playerFavouriteTeamList="Astralis" playerPrivacity="false"
+		playerManagedByUser="2" />
+	<Player playerId="6" playerNickName="Aqua" playerPicture=""
+		playerInterests="" playerEmail="test6@gmail.com" playerLocation="Valencia"
+		playerProvince="Valencia" playerFavouriteSportsList="Fútbol"
+		playerFavouriteTeamList="Valencia FC" playerPrivacity="false"
+		playerManagedByUser="3" />
+	<Player playerId="7" playerNickName="Scoop" playerPicture=""
+		playerInterests="" playerEmail="test7@gmail.com" playerLocation="Vigo"
+		playerProvince="Pontevedra" playerFavouriteSportsList="Tenis"
+		playerFavouriteTeamList="Rafa Nadal" playerPrivacity="false"
+		playerManagedByUser="3" />
+	<Player playerId="8" playerNickName="Butcher" playerPicture=""
+		playerInterests="Fiesta, libros, cine, cantar" playerEmail="test8@gmail.com"
+		playerLocation="Zaragoza" playerProvince="Zaragoza"
+		playerFavouriteSportsList="Baloncesto" playerFavouriteTeamList="Unicaja"
+		playerPrivacity="false" playerManagedByUser="4" />
+	<Player playerId="9" playerNickName="Slayer" playerPicture=""
+		playerInterests="" playerEmail="test9@gmail.com" playerLocation="Madrid"
+		playerProvince="Madrid" playerFavouriteSportsList="Fútbol"
+		playerFavouriteTeamList="Espanyol C.F." playerPrivacity="false"
+		playerManagedByUser="4" />
+	<Player playerId="10" playerNickName="Jacket" playerPicture=""
+		playerInterests="" playerEmail="test10@gmail.com" playerLocation="Lugo"
+		playerProvince="Lugo" playerFavouriteSportsList="Fútbol"
+		playerFavouriteTeamList="Celta de Vigo" playerPrivacity="false"
+		playerManagedByUser="5" />
+
+</dataset>

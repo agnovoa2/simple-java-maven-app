@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Competition competitionId="1" competitionName="Liga gallega 3"
+		competitionShortName="LigaG 3" competitionDescription="Descripción de la liga gallega 3"
+		competitionSportType="FOOTBALL11" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0" user_UserId="[null]"/>
+</dataset>

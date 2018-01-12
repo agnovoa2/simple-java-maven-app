@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<HeadQuarter headQuarterId="1" headquarterName="Almendroa"
+		headquarterDescription="Instalaciones del Rapido de torremolinos"
+		headquarterAddress="Avenida de la Ciudad" headquarterLocality="Couto"
+		headquarterProvince="Ourense" headQuarterManagedByUser_userId="999"
+		headquarterDeleted="false" />
+</dataset>

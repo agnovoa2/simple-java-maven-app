@@ -1,0 +1,54 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Página de Login</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+
+	<!-- 	Bootstrap -->
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+	<h:outputStylesheet name="css/styles.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+</h:head>
+<h:body class="login">
+	<div class="login_wrapper">
+		<div class="animate form login_form">
+			<section class="login_content">
+				<form action="j_security_check" method="post"
+					class="form-horizontal">
+					<h1>Login LIGAaaS</h1>
+					<div>
+						<input type="text" class="form-control" name="j_username"
+							placeholder="Username" />
+					</div>
+					<div>
+						<input type="password" class="form-control" name="j_password"
+							placeholder="Password" />
+					</div>
+					<div>
+						<button type="submit" class="btn btn-default submit">Login</button>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<div class="separator">
+						<div class="clearfix"></div>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+</h:body>
+</html>

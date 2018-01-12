@@ -1,0 +1,17 @@
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="true" userDeleted="false" />
+	<User userId="1999" userLogin="pprodriguez" userName="Patricio"
+		userSurname="Pastos Rodriguez" userPassword="abcd1234.."
+		userBirthdate="2000-01-01 01:01:01" userIdentificationDocument="91122233A"
+		userResidence="Avda Pontevedra 8-1" userLocality="Ourense"
+		userProvince="Ourense" userCountry="España" userPhone="+34988162233"
+		userTwitter="https://twitter.com/pprodriguez" userFacebook="https://facebook.com/pprodriguez"
+		userInstagram="https://instagram.com/pprodriguez" userEmail="pprodriguez@gmail.es"
+		userConfirmed="true" userDeleted="false" />
+</dataset>

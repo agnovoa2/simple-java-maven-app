@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>LigaaaS</title>
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<f:loadBundle basename="messages" var="msg" />
+
+			<h1>My Teams</h1>
+			<p:commandButton value="New Team" type="button"
+				onclick="PF('newTeam').show();" />
+
+
+			<h:dataTable id="userTeamsDatatable" value="#{userTeams.teams}"
+				var="t" rendered="#{userTeams.showTable}"
+				styleClass="table table-striped table-hover table-bordered"
+				headerClass="thead-dark" rowClasses="">
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Name</f:facet>
+					<!-- row record -->
+    				#{t.teamName}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Short Name</f:facet>
+					<!-- row record -->
+    				#{t.teamShortName}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Description</f:facet>
+					<!-- row record -->
+    				#{t.teamDescription}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Sport Type</f:facet>
+					<!-- row record -->
+    				#{t.teamSportType.toString()}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Open</f:facet>
+					<!-- row record -->
+					<h:outputText rendered="#{t.teamOpen}" value="Yes" />
+					<h:outputText rendered="#{!t.teamOpen}" value="No" />
+				</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Min. Players</f:facet>
+					<!-- row record -->
+    				#{t.teamMinPlayers}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Max. Players</f:facet>
+					<!-- row record -->
+    				#{t.teamMaxPlayers}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Public</f:facet>
+					<!-- row record -->
+					<h:outputText rendered="#{t.teamPublic}" value="Yes" />
+					<h:outputText rendered="#{!t.teamPublic}" value="No" />
+				</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Action</f:facet>
+					<!-- row record -->
+					<p:commandButton class="btn btn-info"
+						action="#{userTeams.doEditTeam}" value="Edit">
+						<f:param name="id" value="#{t.teamId}" />
+					</p:commandButton>
+					<p:commandButton id="button" class="btn btn-danger" value="Remove"
+						action="#{userTeams.doRemoveTeam(t)}" />
+					<p:commandButton class="btn btn-warning" action="newPlayer"
+						value="Add player">
+						<f:param name="newPlayerTeam" value="#{t.teamId}" />
+					</p:commandButton>
+				</h:column>
+			</h:dataTable>
+
+
+
+			<p:dialog header="New Team" widgetVar="newTeam" modal="true">
+				<h:form id="newTeamForm">
+					<p:panel id="panel" style="margin-bottom:10px;">
+						<h:panelGrid columns="3" cellpadding="10">
+
+							<p:outputLabel for="Name" value="Team name: " />
+							<p:inputText id="Name" required="true"
+								value="#{userTeams.newTeam.teamName}" maxlength="60"
+								requiredMessage="#{msg['teamName.empty']}"
+								validatorMessage="#{msg['teamName.error']}">
+								<p:watermark for="Name" value="Team name" />
+								<f:validateLength minimum="5" maximum="60" />
+							</p:inputText>
+							<p:message for="Name" />
+
+							<p:outputLabel for="ShortName" value="Team short name: " />
+							<p:inputText id="ShortName" required="true"
+								requiredMessage="#{msg['teamShortName.empty']}"
+								validatorMessage="#{msg['teamShortName.error']}"
+								value="#{userTeams.newTeam.teamShortName}" maxlength="10">
+								<p:watermark for="ShortName" value="Team short name" />
+								<f:validateLength minimum="2" maximum="10" />
+							</p:inputText>
+							<p:message for="ShortName" />
+
+							<p:outputLabel for="TeamDescription" value="Team description: " />
+							<p:inputText id="TeamDescription" required="false"
+								validatorMessage="#{msg['teamDescription.error']}"
+								value="#{userTeams.newTeam.teamDescription}" maxlength="240">
+								<p:watermark for="TeamDescription" value="Team description" />
+								<f:validateLength minimum="10" maximum="240" />
+							</p:inputText>
+							<p:message for="ShortName" />
+
+							<p:outputLabel for="TeamSportType" value="Team sport type: " />
+							<p:selectOneMenu id="TeamSportType"
+								value="#{userTeams.newTeam.teamSportType}">
+								<f:selectItems value="#{userTeams.sportTypes}" var="type"
+									itemLabel="#{type.toString()}" itemValue="#{type}" />
+							</p:selectOneMenu>
+							<p:message for="TeamSportType" />
+
+							<p:outputLabel for="TeamOpen" value="Team open: " />
+							<p:selectBooleanButton id="TeamOpen"
+								value="#{userTeams.newTeam.teamOpen}" onLabel="Yes"
+								offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+							<p:message for="TeamOpen" />
+
+							<p:outputLabel for="TeamMinPlayers" value="Team min players: " />
+							<p:spinner id="TeamMinPlayers"
+								value="#{userTeams.newTeam.teamMinPlayers}" min="1"
+								validatorMessage="#{msg['teamMinPlayers.error']}" />
+							<p:message for="TeamMinPlayers" />
+
+							<p:outputLabel for="TeamMaxPlayers" value="Team max players: " />
+							<p:spinner id="TeamMaxPlayers"
+								value="#{userTeams.newTeam.teamMaxPlayers}" min="1"
+								validatorMessage="#{msg['teamMaxPlayers.error']}" />
+							<p:message for="TeamMaxPlayers" />
+
+							<p:outputLabel for="TeamPublic" value="Team public: " />
+							<p:selectBooleanButton id="TeamPublic"
+								value="#{userTeams.newTeam.teamPublic}" onLabel="Yes"
+								offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+
+						</h:panelGrid>
+					</p:panel>
+					<h:commandButton id="button" class="btn btn-success"
+						value="Register" action="#{userTeams.doRegisterTeam}"
+						onclick="PF('newTeam').hide();$('#form').trigger('reset');" />
+
+				</h:form>
+			</p:dialog>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="1" userLogin="mmrodriguez2" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233B" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112232" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="dnfgalaxy@yopmail.com" userConfirmed="false" userDeleted="false"
+		userToken="17123920472111775202122309700" />
+
+</dataset>

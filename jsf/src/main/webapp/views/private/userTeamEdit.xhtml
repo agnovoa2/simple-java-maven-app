@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>LigaaaS</title>
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<f:loadBundle basename="messages" var="msg" />
+			<h1>Team</h1>
+			<h:form>
+				<p:panel id="panel" header="Change your team information:"
+					style="margin-bottom:10px;">
+					<h:panelGrid columns="3" cellpadding="10">
+
+						<p:outputLabel for="Name" value="Team name: " />
+						<p:inputText id="Name" required="true"
+							value="#{userTeams.selectedTeam.teamName}" maxlength="60"
+							requiredMessage="#{msg['teamName.empty']}"
+							validatorMessage="#{msg['teamName.error']}">
+							<p:watermark for="Name" value="Team name" />
+							<f:validateLength minimum="5" maximum="60" />
+						</p:inputText>
+						<p:message for="Name" />
+
+						<p:outputLabel for="ShortName" value="Team short name: " />
+						<p:inputText id="ShortName" required="true"
+							value="#{userTeams.selectedTeam.teamShortName}" maxlength="10"
+							requiredMessage="#{msg['teamShortName.empty']}"
+							validatorMessage="#{msg['teamShortName.error']}">
+							<p:watermark for="ShortName" value="Team short name" />
+							<f:validateLength minimum="2" maximum="10" />
+						</p:inputText>
+						<p:message for="ShortName" />
+
+						<p:outputLabel for="TeamDescription" value="Team description: " />
+						<p:inputText id="TeamDescription" required="false"
+							value="#{userTeams.selectedTeam.teamDescription}" maxlength="240"
+							validatorMessage="#{msg['teamDescription.error']}">
+							<p:watermark for="TeamDescription" value="Team description" />
+							<f:validateLength minimum="10" maximum="240" />
+						</p:inputText>
+						<p:message for="TeamDescription" />
+
+						<p:outputLabel for="TeamSportType" value="Team sport type: " />
+						<p:selectOneMenu id="TeamSportType"
+							value="#{userTeams.selectedTeam.teamSportType}">
+							<f:selectItems value="#{userTeams.sportTypes}" var="type"
+								itemLabel="#{type.toString()}" itemValue="#{type}" />
+						</p:selectOneMenu>
+						<p:message for="TeamSportType" />
+
+						<p:outputLabel for="TeamOpen" value="Team open: " />
+						<p:selectBooleanButton id="TeamOpen"
+							value="#{userTeams.selectedTeam.teamOpen}" onLabel="Yes"
+							offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+						<p:message for="TeamOpen" />
+
+						<p:outputLabel for="TeamMinPlayers" value="Team min players: " />
+						<p:spinner id="TeamMinPlayers"
+							value="#{userTeams.selectedTeam.teamMinPlayers}" min="1"
+							validatorMessage="#{msg['teamMinPlayers.error']}" />
+						<p:message for="TeamMinPlayers" />
+
+						<p:outputLabel for="TeamMaxPlayers" value="Team max players: " />
+						<p:spinner id="TeamMaxPlayers"
+							value="#{userTeams.selectedTeam.teamMaxPlayers}" min="1"
+							validatorMessage="#{msg['teamMaxPlayers.error']}" />
+						<p:message for="TeamMaxPlayers" />
+
+						<p:outputLabel for="TeamPublic" value="Team public: " />
+						<p:selectBooleanButton id="TeamPublic"
+							value="#{userTeams.selectedTeam.teamPublic}" onLabel="Yes"
+							offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+
+						<h:inputHidden value="#{userTeams.selectedTeam.teamId}" />
+					</h:panelGrid>
+				</p:panel>
+				<h:commandButton value="Save" action="#{userTeams.doUpdateTeam}" />
+			</h:form>
+			
+			<h3>Players</h3>
+			<h:form>
+				<p:dataTable var="p" value="#{userTeams.players}"
+					widgetVar="playersTable"
+					emptyMessage="No players found with given criteria"
+					filteredValue="#{userTeams.filteredPlayers}">
+
+					<f:facet name="header">
+						<p:outputPanel>
+							<h:outputText value="Search by nickname and location:" />
+							<p:inputText id="globalFilter"
+								onkeyup="PF('playersTable').filter()" style="width:150px"
+								placeholder="Enter keyword" />
+						</p:outputPanel>
+					</f:facet>
+
+					<p:column filterBy="#{p.playerNickName}"
+						filterMatchMode="contains" filterStyle="display:none">
+						<h:outputText value="#{p.playerNickName}" />
+					</p:column>
+					<p:column>
+						<h:outputText value="#{p.playerEmail}" />
+					</p:column>
+					<p:column filterBy="#{p.playerLocation}"
+						filterMatchMode="contains" filterStyle="display:none">
+						<h:outputText value="#{p.playerLocation}" />
+					</p:column>
+					<p:column>
+						<h:outputText value="#{p.playerProvince}" />
+					</p:column>
+					<p:column>
+						<h:outputText value="#{p.playerFavouriteSportsList}" />
+					</p:column>
+					<p:column>
+						<h:outputText value="#{p.playerFavouriteTeamList}" />
+					</p:column>
+						
+					<p:column>
+						<p:commandButton value="Add"
+							actionListener="#{userTeams.doAddPlayer}"
+							ajax="false">
+							<f:param name="playerId" value="#{p.playerId}" />
+							<f:param name="teamId" value="#{userTeams.selectedTeam.teamId}" />
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

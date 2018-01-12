@@ -1,0 +1,140 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<f:loadBundle basename="messages" var="msg"/>
+<h:head>
+	<title>Register1</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+
+	<!-- Bootstrap -->
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+
+
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="container-fluid">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<p:panel id="basic" header="Register">
+					<fieldset>
+						<h:form
+							rendered="#{register.currentUser.name == 'anonymous' and not register.registerSuccess}"
+							id="registerForm">
+							<h:panelGrid columns="3" cellpadding="5">
+
+								<p:outputLabel for="Login" value="Login: " />
+								<p:inputText id="Login" required="true" requiredMessage="#{msg['login.empty']}" validatorMessage="#{msg['login.error']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userLogin}" a:placeholder="login"
+									maxlength="15">
+									<f:validateLength minimum="5" maximum="15" />
+								</p:inputText>
+								<p:message for="Login" />
+
+								<p:outputLabel for="Password" value="Password: " />
+								<p:password id="Password" required="true"   match="PasswordConfirmation"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userPassword}" a:placeholder="password"
+									maxlength="60">
+									<f:converter converterId="Md5Converter" />
+									
+								</p:password>
+								<p:message for="Password" />
+
+								<p:outputLabel for="PasswordConfirmation"
+									value="Password confirmation: " />
+								<p:password id="PasswordConfirmation" required="true"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userPasswordConfirmation}"
+									a:placeholder="password" maxlength="60">
+									<f:converter converterId="Md5Converter" />
+								</p:password>
+								<p:message for="PasswordConfirmation" />
+
+								<p:outputLabel for="Name" value="Name: " />
+								<p:inputText id="Name" required="true" requiredMessage="#{msg['name.empty']}" validatorMessage="#{msg['name.error']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userName}" a:placeholder="name"
+									maxlength="60">
+									<f:validateLength minimum="5" maximum="60" />
+								</p:inputText>
+								<p:message for="Name" />
+
+								<p:outputLabel for="Surname" value="Surname: " />
+								<p:inputText id="Surname" required="true" requiredMessage="#{msg['surname.empty']}" validatorMessage="#{msg['surname.error']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userSurname}" a:placeholder="surname"
+									maxlength="60">
+									<f:validateLength minimum="5" maximum="60" />
+								</p:inputText>
+								<p:message for="Surname" />
+
+								<p:outputLabel for="IdentificationDocument"
+									value="Identification Document:    " />
+								<p:inputText id="IdentificationDocument" required="true" requiredMessage="#{msg['identificationdocument.empty']}" validatorMessage="#{msg['identificationdocument.error']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userIdentificationDocument}"
+									a:placeholder="DNI" maxlength="10">
+									<f:validateLength minimum="9" maximum="10" />
+								</p:inputText>
+								<p:message for="IdentificationDocument" />
+
+								<p:outputLabel for="Phone" value="Phone: " />
+								<p:inputMask id="Phone" requiredMessage="#{msg['phone.empty']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userPhone}" mask="+99999999999"
+									required="true" />
+								<p:message for="Phone" />
+
+								<p:outputLabel for="Email" value="Email: " />
+								<p:inputText id="Email" required="true" requiredMessage="#{msg['email.empty']}"
+									class="#{register.currentUser.name == 'anonymous' and !register.error ? 'form-control' : 'form-control alert-danger'}"
+									value="#{register.userEmail}" a:placeholder="email">
+									<f:validator validatorId="custom.emailValidator" />
+								</p:inputText>
+								<p:message for="Email" />
+								
+							</h:panelGrid>
+							<h:commandButton id="button" class="btn btn-success"
+								value="Register" action="#{register.doRegisterUser}" />
+
+						</h:form>
+						<h:outputLabel
+							rendered="#{register.currentUser.name == 'anonymous' and register.registerSuccess}"
+							value="#{register.registerSuccessTitle}"></h:outputLabel>
+						<h:outputLabel
+							rendered="#{register.currentUser.name == 'anonymous' and register.registerSuccess}"
+							value="#{register.registerSuccessMessage}"></h:outputLabel>
+
+					</fieldset>
+				</p:panel>
+			</div>
+
+			<div class="col-md-2"></div>
+
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<h:outputScript name="js/jquery-1.12.4.min.js" />
+	<!-- Bootstrap -->
+	<h:outputScript library="webjars"
+		name="bootstrap/3.3.7/js/bootstrap.min.js" />
+	<!-- Custom Theme Scripts -->
+	<h:outputScript name="js/custom.min.js" />
+</h:body>
+</html>

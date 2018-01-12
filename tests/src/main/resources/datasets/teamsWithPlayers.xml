@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+	<User userId="998" userLogin="mrrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233B" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mrrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+
+	<Team teamId="998" teamName="Rapido de Bouzas F.C.D"
+		teamDescription="Rapido de Bouzas F.C.D" teamShortName="RdB FC"
+		teamSportType="FOOTBALL7" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="1" user_userId="998" />
+	<Team teamId="999" teamName="Rapido de Bouzas F.C."
+		teamDescription="Rapido de Bouzas F.C." teamShortName="RdB FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" user_userId="999" />
+
+	<Player playerId="1" playerNickName="Pepe" playerInterests="Interest 1, interest 2"
+		playerEmail="pepe@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="true" />
+	<Player playerId="2" playerNickName="Antonio" playerInterests="Interest 1, interest 2"
+		playerEmail="antonio@gmail.com" playerLocation="Location"
+		playerProvince="Province" playerFavouriteSportsList="FavouriteList"
+		playerFavouriteTeamList="FavouriteTeamList" playerPrivacity="true" />
+
+	<team_player team_TeamId="999" player_PlayerId="1" />
+	<team_player team_TeamId="999" player_PlayerId="2" />
+</dataset>

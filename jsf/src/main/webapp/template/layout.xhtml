@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+	<title>Ligaaas</title>
+
+
+	<!-- Bootstrap -->
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/nprogress.css" />
+	<h:outputStylesheet name="css/green.css" />
+	<h:outputStylesheet
+		name="css/bootstrap-progressbar-3.3.4.min.css" />
+	<!-- bootstrap-daterangepicker -->
+	<h:outputStylesheet
+		name="css/daterangepicker.css" />
+
+	<h:outputStylesheet name="css/custom.min.css" />
+</h:head>
+
+<h:body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<ui:insert name="sidebar">
+				<ui:include src="sidebar.xhtml" />
+			</ui:insert>
+
+			<!-- top navigation -->
+			<ui:insert name="topbar">
+				<ui:include src="topbar.xhtml" />
+			</ui:insert>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main">
+				<div class="row">
+					<ui:insert name="content">
+						<ui:include src="content.xhtml" />
+					</ui:insert>
+				</div>
+			</div>
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<ui:insert name="footer">
+				<ui:include src="footer.xhtml" />
+			</ui:insert>
+			<!-- /footer content -->
+		</div>
+	</div>
+
+	<h:outputScript library="primefaces" name="jquery/jquery.js"/>
+	<!-- Bootstrap -->
+	<h:outputScript library="webjars" name="bootstrap/3.3.7/js/bootstrap.min.js" />
+	<!-- FastClick -->
+	<h:outputScript name="js/fastclick.js" />
+	<!-- NProgress -->
+	<h:outputScript name="js/nprogress.js" />
+	<!-- Chart.js -->
+	<h:outputScript name="js/Chart.min.js" />
+	<!-- gauge.js -->
+	<h:outputScript name="js/gauge.min.js" />
+	<!-- bootstrap-progressbar -->
+	<h:outputScript
+		name="js/bootstrap-progressbar.min.js" />
+	<!-- iCheck -->
+	<h:outputScript name="js/icheck.min.js" />
+	<!-- Skycons -->
+	<h:outputScript name="js/skycons.js" />
+	<!-- Flot -->
+	<h:outputScript name="js/jquery.flot.js" />
+	<h:outputScript name="js/jquery.flot.pie.js" />
+	<h:outputScript name="js/jquery.flot.time.js" />
+	<h:outputScript name="js/jquery.flot.stack.js" />
+	<h:outputScript name="js/jquery.flot.resize.js" />
+	<!-- Flot plugins -->
+	<h:outputScript
+		name="js/jquery.flot.orderBars.js" />
+	<h:outputScript name="js/jquery.flot.spline.min.js" />
+	<h:outputScript name="js/curvedLines.js" />
+	<!-- DateJS -->
+	<h:outputScript name="js/date.js" />
+	<!-- bootstrap-daterangepicker -->
+	<h:outputScript name="js/moment.min.js" />
+	<h:outputScript
+		name="js/daterangepicker.js" />
+	<!-- Custom Theme Scripts -->
+	<h:outputScript name="js/custom.min.js" />
+
+</h:body>
+</html>

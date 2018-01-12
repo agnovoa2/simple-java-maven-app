@@ -1,0 +1,85 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>LIGAaaS</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+
+<!-- 	Bootstrap -->
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.7/css/bootstrap.min-jsf.css" />
+	<h:outputStylesheet library="webjars"
+		name="font-awesome/4.6.3/css/font-awesome-jsf.css" />
+	<h:outputStylesheet name="css/custom.min.css" />
+	<h:outputStylesheet name="css/styles.css" />
+
+</h:head>
+<h:body>
+
+	<div class="container">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<p:panel id="basic">
+
+						<div class="row">
+							<div class="col-md-1"></div>
+
+							<div class="col-md-10">
+								<div class="divGreeting">
+									<h:outputText class="greeting"
+										value="
+									Welcome to LIGAaaS !!">
+									</h:outputText>
+								</div>
+								<div class="clear" />
+								<div class="description">
+									<h:outputText
+										value="
+									LIGAaaS provides an on-line platform for the creation, management and promotion of sports leagues.
+								" />
+									<div class="clear" />
+									<h:outputText
+										value="
+									LIGAaaS offers the possibility of creating and managing a competition, together with the teams and
+									players that participate in it. It offers the necessary functionalities to manage the days of
+									competition, the results of the meetings and maintain the classification and statistics of
+									the participants. The platform also allows defining and managing the teams participating
+									in the competitions and maintaining the information of the players that make up these teams.
+								" />
+								</div>
+								<div class="clear" />
+								<div class="divLogin">
+									<h:outputText value="To begin, sign in " />
+									<p:link outcome="views/private/index.xhtml" value="here!"> 
+									</p:link>
+								</div>
+								<div class="divRegister">
+									<h:outputText value="If you are not registered, you can do it " />
+									<p:link outcome="views/register.xhtml" value="here"> 
+									</p:link>
+								</div>
+
+							</div>
+
+							<div class="col-md-1"></div>
+						</div>
+
+					</p:panel>
+				</div>
+
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>

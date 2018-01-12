@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">	
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>LigaaaS</title>
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<f:loadBundle basename="messages" var="msg"/>
+			<h1>User Profile</h1>
+			<h:form>
+				<p:panel id="panel" header="Change your profile information:"
+					style="margin-bottom:10px;">
+					<h:panelGrid columns="3" cellpadding="5">
+
+						<p:outputLabel for="Name" value="Name: " />
+						<p:inputText id="Name" required="true" class="form-control"
+							requiredMessage="#{msg['name.empty']}" validatorMessage="#{msg['name.error']}"
+							value="#{userProfile.user.userName}" a:placeholder="Name"
+							maxlength="60">
+							<f:validateLength minimum="5" maximum="60" />
+						</p:inputText>
+						<p:message for="Name" />
+
+						<p:outputLabel for="Surname" value="Surname: " />
+						<p:inputText id="Surname" required="true" class="form-control"
+							requiredMessage="#{msg['surname.empty']}" validatorMessage="#{msg['surname.error']}"
+							value="#{userProfile.user.userSurname}" a:placeholder="Surname"
+							maxlength="60">
+							<f:validateLength minimum="5" maximum="60" />
+						</p:inputText>
+						<p:message for="Surname" />
+
+						<p:outputLabel for="IdentificationDocument"
+							value="Identification Document:" />
+						<p:inputText id="IdentificationDocument" required="true"
+							requiredMessage="#{msg['identificationdocument.empty']}" 
+							validatorMessage="#{msg['identificationdocument.error']}"
+							class="form-control"
+							value="#{userProfile.user.userIdentificationDocument}"
+							a:placeholder="DNI" maxlength="10">
+							<f:validateLength minimum="9" maximum="10" />
+						</p:inputText>
+						<p:message for="IdentificationDocument" />
+
+						<p:outputLabel for="Residence" value="Residence: " />
+						<p:inputText id="Residence" class="form-control"
+							validatorMessage="#{msg['residence.error']}"
+							value="#{userProfile.user.userResidence}"
+							a:placeholder="Residence" maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Residence" />
+
+						<p:outputLabel for="Locality" value="Locality: " />
+						<p:inputText id="Locality" class="form-control"
+							validatorMessage="#{msg['locality.error']}"	
+							value="#{userProfile.user.userLocality}" a:placeholder="Locality"
+							maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Locality" />
+
+						<p:outputLabel for="Province" value="Province: " />
+						<p:inputText id="Province" class="form-control"
+							validatorMessage="#{msg['province.error']}"
+							value="#{userProfile.user.userProvince}" a:placeholder="Province"
+							maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Province" />
+
+						<p:outputLabel for="Country" value="Country: " />
+						<p:inputText id="Country" class="form-control"
+							validatorMessage="#{msg['country.error']}"
+							value="#{userProfile.user.userCountry}" a:placeholder="Country"
+							maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Country" />
+
+						<p:outputLabel for="Phone" value="Phone: " />
+						<p:inputMask id="Phone" class="form-control"
+							requiredMessage="#{msg['phone.empty']}"
+							value="#{userProfile.user.userPhone}" mask="+99999999999"
+							required="true" />
+						<p:message for="Phone" />
+
+						<p:outputLabel for="Twitter" value="Twitter: " />
+						<p:inputText id="Twitter" class="form-control"
+							validatorMessage="#{msg['twitter.error']}"
+							value="#{userProfile.user.userTwitter}" a:placeholder="Twitter"
+							maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Twitter" />
+
+						<p:outputLabel for="Facebook" value="Facebook: " />
+						<p:inputText id="Facebook" class="form-control"
+							validatorMessage="#{msg['facebook.error']}"
+							value="#{userProfile.user.userFacebook}" a:placeholder="Facebook"
+							maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Facebook" />
+
+						<p:outputLabel for="Instagram" value="Instagram: " />
+						<p:inputText id="Instagram" class="form-control"
+							validatorMessage="#{msg['instragram.error']}"
+							value="#{userProfile.user.userInstagram}"
+							a:placeholder="Instagram" maxlength="100">
+							<f:validateLength maximum="100" />
+						</p:inputText>
+						<p:message for="Instagram" />
+
+						<p:outputLabel for="Email" value="Email: " />
+						<p:inputText id="Email" required="true" class="form-control"
+							requiredMessage="#{msg['email.empty']}"
+							value="#{userProfile.user.userEmail}" a:placeholder="email">
+							<f:validator validatorId="custom.emailValidator" />
+						</p:inputText>
+						<p:message for="Email" />
+
+						<p:outputLabel for="Birthdate" value="Birthdate: " />
+						<p:calendar id="Birthdate"
+							value="#{userProfile.user.userBirthdate}" />
+						<p:message for="Birthdate" />
+					</h:panelGrid>
+				</p:panel>
+				<h:commandButton value="Save" action="#{userProfile.updateUser()}" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

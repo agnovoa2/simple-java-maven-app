@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Game matchId="1" matchDate="1991-08-02 00:00:00.0"
+		matchDescription="A Match" matchDuration="0" matchLocalPoints="0"
+		matchState="CANCELED" matchVisitingPoints="0" team_homeTeamId="900"
+		headQuarter_HeadQuarterId="700" round_roundId="500" team_visitingTeamId="800" />
+</dataset>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://xmlns.jcp.org/jsf/html">
+<div class="top_nav">
+	<div class="nav_menu">
+		<nav>
+			<div class="nav toggle">
+				<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class=""><a href="javascript:;"
+					class="user-profile dropdown-toggle" data-toggle="dropdown"
+					aria-expanded="false"> <img src="images/img.jpg" alt=""></img>#{userProfile.user.userName}<span
+						class=" fa fa-angle-down"></span>
+				</a>
+					<ul class="dropdown-menu dropdown-usermenu pull-right">
+						<li><a href="/ligaaasC/jsf/views/private/userProfile.xhtml">
+								Profile</a></li>
+						<li><a href="/ligaaasC/jsf/views/private/userTeams.xhtml">
+								My Teams</a></li>
+						<li><a
+							href="/ligaaasC/jsf/views/private/userCompetitions.xhtml"> My
+								Competitions</a></li>
+						<li><a
+							href="/ligaaasC/jsf/views/private/userHeadQuarters.xhtml"> My
+								HeadQuarters</a></li>
+						<li><a
+							href="/ligaaasC/jsf/views/private/userCreateProfile.xhtml">
+								Create User Profiles</a></li>
+						<li><h:form>
+								<h:commandLink value="Logout" action="#{logout.logout}" />
+							</h:form></li>
+					</ul></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+</html>

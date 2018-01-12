@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+		
+	<Player playerId="1000" playerNickName="Usuario 1000" playerInterests="Interest 1, interest 2"
+		playerEmail="user1000@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="false" />
+
+	<Player playerId="1001" playerNickName="Usuario 1001" playerInterests="Interest 1, interest 2"
+		playerEmail="user1001@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="false" />
+
+	<Player playerId="1004" playerNickName="Usuario 1004" playerInterests="Interest 1, interest 2"
+		playerEmail="user1004@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="false" />
+		
+	<Player playerId="1005" playerNickName="Usuario 1005" playerInterests="Interest 1, interest 2"
+		playerEmail="user1005@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="false" />
+	
+</dataset>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<User userId="999" userLogin="anonymous" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+	<Team teamId="1000" teamName="Inter Movistar" teamDescription="Inter Movistar"
+		teamShortName="Inter" teamSportType="FOOTBALL7" teamOpen="0"
+		teamMinPlayers="10" teamMaxPlayers="17" teamPublic="0" teamDeleted="0"
+		user_userId="999" />
+
+	<Team teamId="1001" teamName="Rapido de Bouzas F.C.D"
+		teamDescription="Rapido de Bouzas F.C.D" teamShortName="RdB FC"
+		teamSportType="FOOTBALL7" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" user_userId="999" />
+</dataset>

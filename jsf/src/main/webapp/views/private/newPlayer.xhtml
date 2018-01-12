@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>LigaaaS</title>
+
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<f:loadBundle basename="messages" var="msg" />
+			<h1>Add player </h1>
+
+			<h:form id="newPlayerForm">
+				<h:panelGrid columns="3" cellpadding="5">
+					
+					<p:outputLabel for="NickName" value="NickName: " />
+					<p:inputText id="NickName" required="true"
+						requiredMessage="#{msg['nickname.empty']}" validatorMessage="#{msg['nickname.error']}"
+						value="#{newPlayer.newPlayer.playerNickName}" maxlength="30">
+						<p:watermark for="NickName" value="NickName" />
+						<f:validateLength minimum="2" maximum="30" />
+					</p:inputText>
+					<p:message for="NickName" />
+
+					<p:outputLabel for="PlayerEmail" value="Player email: " />
+					<p:inputText id="PlayerEmail" required="true"
+						requiredMessage="#{msg['email.empty']}" validatorMessage="#{msg['email.error']}"
+						value="#{newPlayer.newPlayer.playerEmail}" maxlength="40">
+						<p:watermark for="PlayerEmail" value="Player email" />
+						<f:validator validatorId="custom.emailValidator" />
+					</p:inputText>
+					<p:message for="PlayerEmail" />
+
+					<p:outputLabel for="PlayerLocation" value="Player location: " />
+					<p:inputText id="PlayerLocation" required="true"
+						requiredMessage="#{msg['location.empty']}" validatorMessage="#{msg['location.error']}"
+						value="#{newPlayer.newPlayer.playerLocation}" maxlength="100">
+						<p:watermark for="PlayerLocation" value="Player location" />
+						<f:validateLength minimum="2" maximum="100" />
+					</p:inputText>
+					<p:message for="PlayerLocation" />
+
+					<p:outputLabel for="PlayerProvince" value="Player province: " />
+					<p:inputText id="PlayerProvince" required="true"
+						requiredMessage="#{msg['province.empty']}" validatorMessage="#{msg['province.error']}"
+						value="#{newPlayer.newPlayer.playerProvince}" maxlength="50">
+						<p:watermark for="PlayerProvince" value="Player province" />
+						<f:validateLength minimum="2" maximum="50" />
+					</p:inputText>
+					<p:message for="PlayerProvince" />
+					
+					<p:outputLabel for="PlayerPrivacity" value="Player privacity: " />
+					<p:selectBooleanButton id="PlayerPrivacity"
+						value="#{newPlayer.newPlayer.playerPrivacity}" onLabel="Yes"
+						offLabel="No" onIcon="ui-icon-check" offIcon="ui-icon-close" />
+
+				</h:panelGrid>
+				<h:commandButton id="buttonAdd" class="btn btn-success"
+					value="Register" action="#{newPlayer.doAddPlayer}"/>
+
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

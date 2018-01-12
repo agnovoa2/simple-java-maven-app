@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="d23f11aa47a86278435e2f853fed8d3d"
+		userBirthdate="2000-01-01 01:01:01" userIdentificationDocument="11122233A"
+		userResidence="Avda Pontevedra 8-1" userLocality="Ourense"
+		userProvince="Ourense" userCountry="España" userPhone="+34988112233"
+		userTwitter="https://twitter.com/mmrodriguez" userFacebook="https://facebook.com/mmrodriguez"
+		userInstagram="https://instagram.com/mmrodriguez" userEmail="mmrodriguez@gmail.es"
+		userConfirmed="true" userDeleted="false" />
+
+	<User userId="1999" userLogin="pprodriguez" userName="Patricio"
+		userSurname="Pastos Rodriguez" userPassword="d23f11aa47a86278435e2f853fed8d3d"
+		userBirthdate="2000-01-01 01:01:01" userIdentificationDocument="91122233A"
+		userResidence="Avda Pontevedra 8-1" userLocality="Ourense"
+		userProvince="Ourense" userCountry="España" userPhone="+34988162233"
+		userTwitter="https://twitter.com/pprodriguez" userFacebook="https://facebook.com/pprodriguez"
+		userInstagram="https://instagram.com/pprodriguez" userEmail="pprodriguez@gmail.es"
+		userConfirmed="true" userDeleted="false" />
+	<HeadQuarter headQuarterId="1" headquarterName="A Madroa"
+		headquarterDescription="Instalaciones del Rapido de Bouzas"
+		headquarterAddress="Avenida de la Coruña 12" headquarterLocality="Ourense"
+		headquarterProvince="Pontevedra" headQuarterManagedByUser_userId="999"
+		headquarterDeleted="false" />
+	<HeadQuarter headQuarterId="700" headquarterName="A Madroa"
+		headquarterDescription="Instalaciones del Rapido de Bouzas"
+		headquarterAddress="Avenida de la Coruña 12" headquarterLocality="Bouzas"
+		headquarterProvince="Pontevedra" headQuarterManagedByUser_userId="999"
+		headquarterDeleted="false" />
+	<Contact contactId="1" contactEmail="rapidodebouzas@gmail.gal"
+		contactWeb="http://www.rapidodebouzas.com/" contactPhone="+34988012345"
+		contactTwitter="https://twitter.com/rapidobouzas"
+		contactFacebook="https://es-es.facebook.com/CF-RÁPIDO-DE-BOUZAS-155018914560146/" />
+	<Competition competitionId="1" competitionName="Liga gallega 2"
+		competitionShortName="LigaG 2" competitionDescription="Descripción de la liga gallega 2"
+		competitionSportType="FOOTBALL7" competitionType="DOUBLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="1" competitionDeleted="0" user_UserId="999"
+		headQuarter_HeadQuarterId="1" contact_ContactId="1" />
+	<Competition competitionId="2" competitionName="Liga gallega"
+		competitionShortName="LigaG" competitionDescription="Descripción de la liga gallega"
+		competitionSportType="FOOTBALL11" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="1" competitionDeleted="0" user_UserId="999"
+		headQuarter_HeadQuarterId="1" />
+	<Competition competitionId="3" competitionName="Liga gallega 3"
+		competitionShortName="LigaG 3" competitionDescription="Descripción de la liga gallega 3"
+		competitionSportType="VIDEOGAMES" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="1" competitionDeleted="0" user_UserId="999"
+		headQuarter_HeadQuarterId="700" contact_ContactId="1" />
+	<Team teamId="997" teamName="Rapido de Bouzas F.C."
+		teamDescription="Rapido de Bouzas F.C." teamShortName="RdB FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="1" teamDeleted="0" />
+	<team_competition team_TeamId="997"
+		competition_CompetitionId="1" />
+</dataset>

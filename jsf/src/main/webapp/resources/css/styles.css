@@ -1,0 +1,36 @@
+.row {
+	margin-top: 8%;
+}
+
+.row #basic {
+	height: auto;
+}
+
+.greeting {
+	font-size: 250%;
+}
+
+.divGreeting {
+	margin-top: -2em;
+	padding-bottom: 1.5em;
+}
+
+.description {
+	text-align: justify;
+}
+
+.divLogin {
+	margin-top: 3em;
+}
+
+.divLogin a, .divRegister a {
+	font-weight: bold;
+}
+
+.loginError{
+	padding-top:5%;
+}
+
+.returnToLogin{
+	margin-top:2%;
+}

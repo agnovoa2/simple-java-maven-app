@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	<Team teamId="1" teamName="Inter Movistar" teamShortName="Inter"
+		teamDescription="Inter Movistar" teamSportType="FOOTBALL7" teamOpen="0"
+		teamMinPlayers="10" teamMaxPlayers="17" teamPublic="0" teamDeleted="0" user_userId="999" />
+</dataset>

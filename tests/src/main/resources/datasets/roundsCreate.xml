@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Round roundId="1" roundNumber="5" roundDate="1991-08-02 00:00:00.0"
+		roundState="CANCELED" roundDescription="For testing"
+		competition_CompetitionId="888" headquarter_HeadQuarterId="888" />
+</dataset>

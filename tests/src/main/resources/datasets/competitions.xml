@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+	<Team teamId="999" teamName="Rapido de Bouzas F.C."
+		teamDescription="Rapido de Bouzas F.C." teamShortName="RdB FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" user_userId="999" />
+	<Team teamId="998" teamName="Rapido de Bouzas F.C. 2"
+		teamDescription="Rapido de Bouzas F.C. 2" teamShortName="RdB FC 2"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" user_userId="999" />
+	<Competition competitionId="998" competitionName="Liga gallega 2"
+		competitionShortName="LigaG 2" competitionDescription="Descripción de la liga gallega 2"
+		competitionSportType="FOOTBALL7" competitionType="DOUBLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0" user_UserId="999" />
+	<Competition competitionId="999" competitionName="Liga gallega"
+		competitionShortName="LigaG" competitionDescription="Descripción de la liga gallega"
+		competitionSportType="FOOTBALL11" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0" />
+	<Competition competitionId="997" competitionName="Liga gallega 3"
+		competitionShortName="LigaG 3" competitionDescription="Descripción de la liga gallega 3"
+		competitionSportType="VIDEOGAMES" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0" />
+	<team_competition team_TeamId="999"
+		competition_CompetitionId="997" />
+	<team_competition team_TeamId="998"
+		competition_CompetitionId="997" />
+</dataset>

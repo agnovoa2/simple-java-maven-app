@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="999" userLogin="anonymous" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+		
+	<Player playerId="1000" playerNickName="Usuario 1000" playerInterests="Interest 1, interest 2"
+		playerEmail="user1000@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="true" playerManagedByUser_userId="999" />
+
+	<Player playerId="1001" playerNickName="Usuario 1001" playerInterests="Interest 1, interest 2"
+		playerEmail="user1001@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="true" playerManagedByUser_userId="999" />
+
+	<Player playerId="1004" playerNickName="Usuario 1004" playerInterests="Interest 1, interest 2"
+		playerEmail="user1004@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="true" playerManagedByUser_userId="999" />
+		
+	<Player playerId="1005" playerNickName="Usuario 1005" playerInterests="Interest 1, interest 2"
+		playerEmail="user1005@gmail.com" playerLocation="Location" playerProvince="Province"
+		playerFavouriteSportsList="FavouriteList" playerFavouriteTeamList="FavouriteTeamList"
+		playerPrivacity="true" playerManagedByUser_userId="999" />
+	
+	<Team teamId="999" teamName="Rapido de Bouzas F.C."
+		teamDescription="Rapido de Bouzas F.C." teamShortName="RdB FC"
+		teamSportType="FOOTBALL11" teamOpen="1" teamMinPlayers="18"
+		teamMaxPlayers="27" teamPublic="0" teamDeleted="0" user_userId="999" />
+		
+	<Team_player team_TeamId="999" player_PlayerId="1000" />
+	<Team_player team_TeamId="999" player_PlayerId="1001" />
+	<Team_player team_TeamId="999" player_PlayerId="1004" />
+	<Team_player team_TeamId="999" player_PlayerId="1005" />
+</dataset>

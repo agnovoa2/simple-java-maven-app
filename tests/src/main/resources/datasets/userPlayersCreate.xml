@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<Player playerId="1" playerNickName="Manolo" playerInterests="Interest 1, interest 2"
+		playerEmail="manolo@gmail.com" playerLocation="Location"
+		playerProvince="Province" playerFavouriteSportsList="FavouriteList"
+		playerFavouriteTeamList="FavouriteTeamList" playerPrivacity="true"
+		playerManagedByUser_userId="998" />
+	
+</dataset>

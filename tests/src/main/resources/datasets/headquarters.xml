@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<User userId="999" userLogin="mmrodriguez" userName="Manuel"
+		userSurname="Manso Rodriguez" userPassword="abcd1234.." userBirthdate="2000-01-01 01:01:01"
+		userIdentificationDocument="11122233A" userResidence="Avda Pontevedra 8-1"
+		userLocality="Ourense" userProvince="Ourense" userCountry="España"
+		userPhone="+34988112233" userTwitter="https://twitter.com/mmrodriguez"
+		userFacebook="https://facebook.com/mmrodriguez" userInstagram="https://instagram.com/mmrodriguez"
+		userEmail="mmrodriguez@gmail.es" userConfirmed="false" userDeleted="false" />
+
+	<HeadQuarter headQuarterId="700" headquarterName="A Madroa"
+		headquarterDescription="Instalaciones del Rapido de Bouzas"
+		headquarterAddress="Avenida de la Coruña 12" headquarterLocality="Bouzas"
+		headquarterProvince="Pontevedra" headQuarterManagedByUser_userId="999"
+		headquarterDeleted="false" />
+
+	<Competition competitionId="600" competitionName="Liga gallega"
+		competitionShortName="LigaG" competitionDescription="Descripción de la liga gallega"
+		competitionSportType="FOOTBALL11" competitionType="SIMPLE"
+		competitionOpen="1" competitionMinTeams="18" competitionMaxTeams="27"
+		competitionPublic="0" competitionDeleted="0"
+		headQuarter_HeadQuarterId="700" user_UserID="999" />
+</dataset>

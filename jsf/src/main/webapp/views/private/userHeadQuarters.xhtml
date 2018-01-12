@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>My HeadQuarters</title>
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<h1>My HeadQuarters</h1>
+
+			<h:dataTable value="#{userHeadQuarters.headQuarters}" var="h"
+				rendered="#{userHeadQuarters.showTable}"
+				styleClass="table table-striped table-hover table-bordered"
+				headerClass="thead-dark" rowClasses="">
+
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+					<!-- row record -->
+    				#{h.headquarterName}
+    			</h:column>
+
+				<h:column>
+					<f:facet name="header">Description</f:facet>
+					<!-- row record -->
+    				#{h.headquarterDescription}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Province</f:facet>
+					<!-- row record -->
+    				#{h.headquarterProvince}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Locality</f:facet>
+					<!-- row record -->
+    				#{h.headquarterLocality}
+    			</h:column>
+
+				<h:column>
+					<!-- column header -->
+					<f:facet name="header">Address</f:facet>
+					<!-- row record -->
+    				#{h.headquarterAddress}
+    			</h:column>
+
+			</h:dataTable>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

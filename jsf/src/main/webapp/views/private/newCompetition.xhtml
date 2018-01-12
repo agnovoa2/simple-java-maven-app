@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:o="http://xmlns.jcp.org/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<meta charset="UTF-8"></meta>
+	<title>My Competitions</title>
+</h:head>
+<h:body>
+	<ui:composition template="../../template/layout.xhtml">
+		<ui:define name="content">
+			<h1>New Competition</h1>
+			<h:form>
+				<p:panel id="panel" header="Edit the competition information:"
+					style="margin-bottom:10px;">
+					<h:panelGrid columns="3" cellpadding="5">
+
+						<p:outputLabel for="Name" value="Name: " />
+						<p:inputText id="Name" required="true" class="form-control"
+							requiredMessage="#{msg['name.empty']}"
+							validatorMessage="#{msg['name.error']}"
+							value="#{newCompetition.competition.competitionName}"
+							a:placeholder="Name" maxlength="60">
+							<f:validateLength minimum="5" maximum="60" />
+						</p:inputText>
+						<p:message for="Name" />
+
+						<p:outputLabel for="ShortName" value="Short Name:  " />
+						<p:inputText id="ShortName" required="true" class="form-control"
+							requiredMessage="#{msg['shortName.empty']}"
+							validatorMessage="#{msg['shortName.error']}"
+							value="#{newCompetition.competition.competitionShortName}"
+							a:placeholder="Short Name" maxlength="10">
+							<f:validateLength minimum="2" maximum="10" />
+						</p:inputText>
+						<p:message for="ShortName" />
+
+						<p:outputLabel for="Description" value="Description: " />
+						<p:inputText id="Description" required="true" class="form-control"
+							requiredMessage="#{msg['description.empty']}"
+							validatorMessage="#{msg['description.error']}"
+							value="#{newCompetition.competition.competitionDescription}"
+							a:placeholder="Description" maxlength="240">
+							<f:validateLength minimum="10" maximum="240" />
+						</p:inputText>
+						<p:message for="Description" />
+
+						<p:outputLabel for="SportType" value="Sport Type: " />
+						<p:selectOneMenu id="SportType"
+							value="#{newCompetition.competitionSportType}">
+							<f:selectItem itemLabel="Football 11" itemValue="Football 11" />
+							<f:selectItem itemLabel="Football 7" itemValue="Football 7" />
+							<f:selectItem itemLabel="Basketball" itemValue="Basketball" />
+							<f:selectItem itemLabel="Videogames" itemValue="Videogames" />
+						</p:selectOneMenu>
+						<p:message for="SportType" />
+
+						<p:outputLabel for="Type" value="Competition Type: " />
+						<p:selectOneMenu id="Type"
+							value="#{newCompetition.competitionType}">
+							<f:selectItem itemLabel="Simple" itemValue="Simple" />
+							<f:selectItem itemLabel="Double" itemValue="Double" />
+						</p:selectOneMenu>
+						<p:message for="Type" />
+
+						<p:outputLabel for="Open" value="Is Open: " />
+						<p:selectBooleanCheckbox id="Open"
+							value="#{newCompetition.competition.competitionOpen}" />
+						<p:message for="Open" />
+
+						<p:outputLabel for="MinTeams" value="Min. Teams: " />
+						<p:spinner id="MinTeams"
+							value="#{newCompetition.competition.competitionMinTeams}" />
+						<p:message for="MinTeams" />
+
+						<p:outputLabel for="MaxTeams" value="Max. Teams: " />
+						<p:spinner id="MaxTeams"
+							value="#{newCompetition.competition.competitionMaxTeams}" />
+						<p:message for="MaxTeams" />
+
+						<p:outputLabel for="Public" value="Is Public: " />
+						<p:selectBooleanCheckbox id="Public"
+							value="#{newCompetition.competition.competitionPublic}" />
+						<p:message for="Public" />
+
+					</h:panelGrid>
+				</p:panel>
+				<h:commandButton value="Save"
+					action="#{newCompetition.createCompetition}" />
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
