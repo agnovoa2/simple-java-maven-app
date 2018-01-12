@@ -68,10 +68,11 @@
         <configuration>
           <skip>false</skip>
           <filename>${project.parent.artifactId}-${project.version}.${project.packaging}</filename>
-	  <jboss-home>/opt/WildFly</jboss-home>
+	      <jboss-home>/opt/WildFly</jboss-home>
           <modules-path>/opt/WildFly/modules</modules-path>
+		  <hostname>192.168.127.128</hostname>
           <port>10990</port>
-	  <username>admin</username>
+		  <username>admin</username>
           <password>Admin#70365</password>
         </configuration>
       </plugin>
