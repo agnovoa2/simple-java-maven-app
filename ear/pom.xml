@@ -73,7 +73,7 @@
 		  <hostname>10.5.0.2</hostname>
                   <port>10990</port>
 		  <username>admin</username>
-          <password>Admin#70365</password>
+          <password>admin</password>
         </configuration>
       </plugin>
     </plugins>
